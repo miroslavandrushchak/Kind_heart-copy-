@@ -29,6 +29,16 @@ document.addEventListener("click", (login) => {
   }
 });
 
+
+
+let closefRegistrationWindow = document.querySelector(".close_registration_window");
+
+usersRegistfration.forEach((button) => {
+  button.addEventListener("click", (registration) => {
+    registrationPopupBackground.classList.add("active_registration_form");
+    registrationPopupForm.classList.add("active_registration_form");
+  });
+
 let usersRegistration = document.querySelectorAll(".registration");
 let registrationPopupBackground = document.querySelector(".registration_popup");
 let registrationPopupForm = document.querySelector(".registration_popup_form");
