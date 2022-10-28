@@ -8,34 +8,30 @@
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/style 1.css" type="text/css">
   <link rel="stylesheet" href="styles/fonts.css">
-  <link rel="stylesheet" href="styles/preloader.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
-
-  <header data-wow-duration="2s" class="header wow animate__animated animate__fadeInTopLeft">
+  <header data-wow-duration="2s" id="ddd" class="header wow animate__animated animate__fadeInTopLeft">
     <a href="index.html"><img src="images/Logo.svg" alt="Reload" class="mini_logo"></a>
     <div class="language">
-      <a href="#bottom" class="language_change">УКР</a> <a href="#bottom" class="language_change">РУС</a> <a
-        href="#bottom" class="language_change">ENG</a>
+      <a href="#bottom" class="language_change">УКР</a>
+      <a href="#bottom" class="language_change">РУС</a>
+      <a href="#bottom" class="language_change">ENG</a>
     </div>
     <div data-wow-duration="1.5s" class="about_site wow animate__animated animate__fadeInTopRight">
-      <a href="projects.html" class="about_site_buttons">Проекти</a> <a href="#" class="about_site_buttons">Архів</a>
-      <a href="#" class="about_site_buttons">Контакти</a> <a href="#" class="urgent_help"
-        class="about_site_buttons">Термінова
-        допомога</a>
+      <a href="projects.html" class="about_site_buttons">Проекти</a>
+      <a href="#" class="about_site_buttons">Архів</a>
+      <a href="#" class="about_site_buttons">Контакти</a>
+      <a href="#" class="urgent_help" class="about_site_buttons">Термінова допомога</a>
     </div>
-
     <div class="user">
       <a class="login">Вхід</a>
-      <a>|</a>
+      <span>|</span>
       <a class="registration">Зареєструватися</a>
     </div>
-
     <div class="progress_bar" id="progress"></div>
   </header>
-
   <div class="login_popup">
     <form class="login_popup_form">
       <h2 class="close_login_window">Закрити</h2>
@@ -43,14 +39,14 @@
       <div class="data_block">
         <img src="images/Logo.svg" alt="Welcome" class="mini_logo_in_login_form" width="100px">
         <label class="label_1">
-          <input type="text" name="users_login">
+          <input type="text" name="users_login" class="input_login_form">
           <div class="label_of_data">
             Логін
           </div>
         </label>
         <br>
         <label class="label_1">
-          <input type="password" name="users_password">
+          <input type="password" name="users_password" class="input_login_form">
           <div class="label_of_data">
             Пароль
           </div>
@@ -59,7 +55,6 @@
       <button type="submit" class="data_submit">Увійти</button>
     </form>
   </div>
-
   <div class="registration_popup">
     <form class="registration_popup_form" type="submit">
       <h2 class="close_registration_window">Закрити</h2>
@@ -67,87 +62,388 @@
       <div class="new_data_block">
         <img src="images/Logo.svg" alt="Welcome" class="mini_logo_in_registration_form" width="250px">
         <label class="label_1">
-          <input type="email" name="new_users_contact">
+          <input type="email" name="new_users_contact" class="input_registration_form">
           <div class="label_of_new_data">
-            Електронна пошта або номер телефону
+            Електронна пошта
           </div>
         </label>
         <br>
         <label class="label_1">
-          <input type="text" name="new_users_login">
+          <input type="text" name="new_users_login" class="input_registration_form">
           <div class="label_of_new_data">
             Логін
           </div>
         </label>
         <br>
         <label class="label_1">
-          <input type="password" name="new_users_password">
+          <input type="password" name="new_users_password" class="input_registration_form">
           <div class="label_of_new_data">
             Пароль
           </div>
         </label>
       </div>
-      <button type="submit" class="new_data_submit">Зареєструватися</button>
+      <button type="submit" class="new_data_submit_button">Зареєструватися</button>
     </form>
   </div>
-
-  <!-- <div class="help_now_background">
+  <div class="help_now_background">
     <div class="help_now_popup">
-      <div class=""></div>
-      <img src="images/Help now (logos)/Do.svg" alt="">
-      <h1>Зробити</h1>
+      <h1 class="kinds_of_help_topic" id="kinds_of_help_sentence">Види допомоги</h1>
+      <div class="help_now_items">
+        <div class="help_now_variants">
+          <div class="help_now_titles">
+            <a href="#finance_help_window_anchor">
+              <img class="help_now_button do_help" tabindex="0" src="images/Help now (logos)/Do.svg" alt="">
+            </a>
+            <h1 class="help_now_title_fonts">Зробити</h1>
+          </div>
+          <p class="help_now_popup_text">Натискайте цю кнопку, якщо Ви хочете зробити, наприклад, ремонт у дитячому
+            будинку,
+            складну операцію, побудувати дитячий майданчик або побудувати житло для переселенців і т.д.
+          </p>
+          <br>
+          <p class="help_now_popup_text">
+            Ця кнопка для організацій, які можуть взяти на себе відповідальність за увесь
+            проект
+          </p>
+        </div>
+        <div class="help_now_variants">
+          <div class="help_now_titles">
+            <a href="#finance_help_window_anchor">
+              <img class="help_now_button finance_help" tabindex="0" src="images/Help now (logos)/Finance help.svg"
+                alt="">
+            </a>
+            <h1 class="help_now_title_fonts">Фінансова допомога</h1>
+          </div>
+          <p class="help_now_popup_text">
+            Перераховуйте гроші тим, хто дійсно потребує цього
+          </p>
+        </div>
+        <div class="help_now_variants">
+          <div class="help_now_titles">
+            <a href="#finance_help_window_anchor">
+              <img class="help_now_button material_help" tabindex="0" src="images/Help now (logos)/Material help.svg"
+                alt="">
+            </a>
+            <h1 class="help_now_title_fonts">Матеріальна допомога</h1>
+          </div>
+          <p class="help_now_popup_text">
+            Зберіть ліки, речі, їжу, іграшки та інше, для тих, кому це необхідно
+          </p>
+        </div>
+        <div class="help_now_variants">
+          <div class="help_now_titles">
+            <a href="#finance_help_window_anchor">
+              <img class="help_now_button volunteering_help" tabindex="0" src="images/Help now (logos)/Volunteering.svg"
+                alt="">
+            </a>
+            <h1 class="help_now_title_fonts">Волонтерство</h1>
+          </div>
+          <p class="help_now_popup_text">
+            Допоможіть або ділом, або професійними навичками. Підтримайте проекти своєю
+            роботою
+          </p>
+        </div>
+      </div>
+      <div class="finance_help_window" id="finance_help_window_anchor">
+        <div class="finance_help_form_button">
+          <h1 class="kinds_of_help_topic">Заповніть форму</h1>
+          <div class="persons">
+            <h6 class="persons_type individual_person_button" tabindex="0">Фізична особа</h6>
+            <h6 class="persons_type legal_person_button" tabindex="0">Юридична особа</h6>
+          </div>
+          <div class="finance_help_now_forms">
+            <div class="person_forms">
+              <form class="help_now_form_data">
+                <div class="help_now_form_first_block">
+                  <label class="label_registration_help">
+                    <input type="text" name="users_first_name" class="input_help_now_form">
+                    <div class="label_of_new_data">
+                      Ім'я
+                    </div>
+                  </label>
+                  <br>
+                  <label class="label_registration_help">
+                    <input type="text" name="users_second_name" class="input_help_now_form">
+                    <div class="label_of_new_data">
+                      Прізвище
+                    </div>
+                  </label>
+                  <br>
+                  <label class="label_registration_help">
+                    <input type="text" name="name_of_company" class="input_help_now_form">
+                    <div class="help_now_add_logo">
+                      <input type="file" id="add_logo_file" accept=".png, .jpg, .jpeg, .svg"
+                        class="search_logo_of_company">
+                      <label for="add_logo_file" class="add_logo_of_company">+ Додати логотип</label>
+                    </div>
+                    <div class="label_of_new_data">
+                      Назва компанії, організації
+                    </div>
+                  </label>
+                  <br>
+                  <label class="label_registration_help">
+                    <input type="email" name="e-mail" class="input_help_now_form">
+                    <div class="label_of_new_data">
+                      Email
+                    </div>
+                  </label>
+                  <br>
+                  <label class="label_registration_help">
+                    <input type="tel" name="number_of_phone" class="input_help_now_form">
+                    <div class="label_of_new_data">
+                      Номер телефону
+                    </div>
+                  </label>
+                  <br>
+                  <br>
+                  <div class="help_now_form_third_block">
+                    <label class="label_registration_help">
+                      <input type="text" name="country" class="input_help_now_form">
+                      <div class="label_of_new_data">
+                        Юридична адреса
+                      </div>
+                    </label>
+                    <br>
+                    <label class="label_registration_help">
+                      <input type="text" name="town" class="input_help_now_form">
+                      <div class="label_of_new_data">
+                        ЗКПО
+                      </div>
+                    </label>
+                    <br>
+                    <label class="label_registration_help">
+                      <input type="text" name="district" class="input_help_now_form">
+                      <div class="label_of_new_data">
+                        ІНН
+                      </div>
+                    </label>
+                    <br>
+                    <label class="label_registration_help">
+                      <input type="text" name="e-mail" class="input_help_now_form">
+                      <div class="label_of_new_data">
+                        Тип оподаткування
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="help_now_form_second_block">
+                  <label class="label_registration_help">
+                    <input type="text" name="country" class="input_help_now_form">
+                    <div class="label_of_new_data">
+                      Країна
+                    </div>
+                  </label>
+                  <br>
+                  <label class="label_registration_help">
+                    <input type="text" name="town" class="input_help_now_form">
+                    <div class="label_of_new_data">
+                      Місто
+                    </div>
+                  </label>
+                  <br>
+                  <label class="label_registration_help">
+                    <input type="text" name="district" class="input_help_now_form">
+                    <div class="label_of_new_data">
+                      Штат, район
+                    </div>
+                  </label>
+                  <br>
+                  <label class="label_registration_help">
+                    <input type="text" name="e-mail" class="input_help_now_form">
+                    <div class="label_of_new_data">
+                      Адреса
+                    </div>
+                  </label>
+                  <br>
+                  <label class="label_registration_help">
+                    <input type="text" name="postal_code" class="input_help_now_form">
+                    <div class="label_of_new_data">
+                      Поштовий індекс
+                    </div>
+                  </label>
+                  <br>
+                  <br>
+                  <div class="help_now_form_fourth_block">
+                    <label class="label_registration_help">
+                      <input type="text" name="country" class="input_help_now_form">
+                      <div class="label_of_new_data">
+                        Система оподаткування
+                      </div>
+                    </label>
+                    <br>
+                    <label class="label_registration_help">
+                      <input type="text" name="town" class="input_help_now_form">
+                      <div class="label_of_new_data">
+                        Телефон бухгалтерії
+                      </div>
+                    </label>
+                    <br>
+                    <label class="label_registration_help">
+                      <input type="text" name="district" class="input_help_now_form">
+                      <div class="label_of_new_data">
+                        Факс
+                      </div>
+                    </label>
+                  </div>
+                </div>
+                <div class="help_now_pay">
+                  <h6 class="kinds_of_help_change" tabindex="0">Ви можете змінити вид допомоги</h6>
+                  <div class="help_now_items">
+                    <div class="help_now_variants_2 do_help_2">
+                      <div class="help_now_titles">
+                        <img class="help_now_button do_help" tabindex="0" src="images/Help now (logos)/Do.svg" alt="">
+                        <h1 class="help_now_title_fonts_2">Зробити</h1>
+                      </div>
+                    </div>
+                    <div class="help_now_variants_2 finance_help_2">
+                      <div class="help_now_titles">
+                        <img class="help_now_button finance_help" tabindex="0"
+                          src="images/Help now (logos)/Finance help.svg" alt="">
+                        <h1 class="help_now_title_fonts_2">Фінансова допомога</h1>
+                      </div>
+                    </div>
+                    <div class="help_now_variants_2 material_help_2">
+                      <div class="help_now_titles">
+                        <img class="help_now_button material_help" tabindex="0"
+                          src="images/Help now (logos)/Material help.svg" alt="">
+                        <h1 class="help_now_title_fonts_2">Матеріальна допомога</h1>
+                      </div>
+                    </div>
+                    <div class="help_now_variants_2 volunteering_help_2">
+                      <div class="help_now_titles">
+                        <img class="help_now_button volunteering_help" tabindex="0"
+                          src="images/Help now (logos)/Volunteering.svg" alt="">
+                        <h1 class="help_now_title_fonts_2">Волонтерство</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hover_arrow_blocks">
+                    <i class="fa-solid fa-arrow-up fa-arrow-do-help"></i>
+                    <i class="fa-solid fa-arrow-up fa-arrow-finance-help"></i>
+                    <i class="fa-solid fa-arrow-up fa-arrow-material-help"></i>
+                    <i class="fa-solid fa-arrow-up fa-arrow-volunteering-help"></i>
+                  </div>
+                  <div class="help_now_pay_block">
+                    <h6 class="ways_of_pay_denotation" tabindex="0">Способи оплати</h6>
+                    <div class="ways_of_pay_block">
+                      <a class="ways_of_pay_logo" id="logo_Visa_MasterCard">
+                        <img src="images/Ways of pay (logos)/Visa_MasterCard.svg" class="ways_of_pay_logo_image"
+                          tabindex="0">
+                        Visa/MasterCard
+                      </a>
+                      <a class="ways_of_pay_logo" id="logo_Privatbank">
+                        <div class="ways_of_pay_logo_text">
+                          <h6 class="ways_of_pay_logo_notation">Приват24</h6>
+                          ПриватБанк
+                        </div>
+                      </a>
+                      <a class="ways_of_pay_logo" id="logo_PayPal">
+                        <img src="images/Ways of pay (logos)/PayPal.svg" class="ways_of_pay_logo_image" tabindex="0">
+                        PayPal
+                      </a>
+                      <a class="ways_of_pay_logo" id="logo_WebMoney">
+                        <img src="images/Ways of pay (logos)/WebMoney.svg" class="ways_of_pay_logo_image" tabindex="0">
+                        WebMoney
+                      </a>
+                      <a class="ways_of_pay_logo" id="logo_terminals_of_Ukraine">
+                        <img src="images/Ways of pay (logos)/Terminals of Ukraine.svg" class="ways_of_pay_logo_image"
+                          tabindex="0">
+                        Термінали України
+                      </a>
+                      <a class="ways_of_pay_logo" id="logo_bank_transition">
+                        <img src="images/Ways of pay (logos)/Bank transition.svg" class="ways_of_pay_logo_image"
+                          tabindex="0">
+                        Банківський переказ
+                      </a>
+                    </div>
+                    <div class="credit_card_data_block">
+                      <h6 class="input_card_data_denotation">Введіть наступні дані</h6>
+                      <div class="credit_card_data_form">
+                        <label class="label_registration_help number_of_card">
+                          <div name="number_of_card" class="label_of_new_card_data">
+                            Номер картки
+                          </div>
+                          <input type="text" class="input_help_now_form" maxlength="16">
+                        </label>
+                        <label for="" class="label_registration_help validity_of_card">
+                          <div name="validity_of_card" class="label_of_new_card_data">
+                            Термін дії
+                          </div>
+                          <input type="text" class="input_help_now_form" maxlength="5">
+                        </label>
+                        <label class="label_registration_help card_verification_value">
+                          <div name="card_verification_value" class="label_of_new_card_data">
+                            CVC/CVV
+                          </div>
+                          <input type="text" class="input_help_now_form" maxlength="3">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="help_now_new_data_submit_button">Допомогти</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-  </div> -->
-
+  </div>
   <div data-wow-duration="2.5s" class="wow animate__animated animate__fadeInRight"><img src="images/Heart isometry.svg"
       alt="" class="general_logo"></div>
-
   <div data-wow-duration="1.75s" class="general_text wow animate__animated animate__fadeInLeft">
-
     <h1 id="h1">Добре серце</h1>
-    <h6 class="about_project">Докладніше про проект: <a href="#" class="transition_button"><img
-          src="images/How you can help.svg" alt=""></a></h6>
-    <p>Вже зараз Ви можете допомогти тим, хто потребує допомоги</p>
-    <h6 class="how_you_can_help">Як Ви можете допомогти?<a href="#"><img src="images/How you can help.svg"
-          alt="Допомогти зараз" class="transition_button"></a><a href="#" class="help_now">Допомогти вже зараз</a>
+    <h6 class="about_project">Докладніше про проект:
+      <a href="#" class="transition_button">
+        <img src="images/How you can help.svg" alt="">
+      </a>
+    </h6>
+    <p class="paragraph">Вже зараз Ви можете допомогти тим, хто потребує допомоги</p>
+    <h6 class="how_you_can_help">Як Ви можете допомогти?
+      <a>
+        <img src="images/How you can help.svg" alt="Допомогти зараз" class="transition_button">
+      </a>
+      <a class="help_now">Допомогти вже зараз</a>
     </h6>
     <div class="project">
-      <p>Якщо Вам неохідна допомога, додайте проект</p>
-      <h6 class="add_project">Додати проект:<a href="#"><img src="images/Add project.svg" class="transition_button"></a>
+      <p class="paragraph">Якщо Вам неохідна допомога, додайте проект</p>
+      <h6 class="add_project">Додати проект:
+        <a>
+          <img src="images/Add project.svg" class="transition_button">
+        </a>
       </h6>
     </div>
   </div>
-
   <div class="chat_block">
-    <a class="chat"><img src="images/Chat.svg"></a>
+    <img src="images/Chat.svg">
   </div>
-
-  <div class="chat_popup">
-    <form class="chat_popup_form">
-      <h4 class="close_chat_window">Закрити</h4>
-      <div class="message_block">
-        <label class="label_2">
-          <textarea type="text" name="message"></textarea>
-          <div class="label_of_message">
-            Напишіть повідомлення
-          </div>
-        </label>
-      </div>
-      <button type="submit" class="message_submit">Написати</button>
-    </form>
-  </div>
-
+  <form class="chat_popup_form">
+    <h4 class="close_chat_window">Закрити</h4>
+    <div class="message_block">
+      <label class="label_message">
+        <textarea type="text" name="message"></textarea>
+        <div class="label_of_message">
+          Напишіть повідомлення
+        </div>
+      </label>
+    </div>
+    <button type="submit" class="message_submit">Написати</button>
+  </form>
   <footer data-wow-duration="1s" class="repost wow animate__animated animate__fadeInLeft">
-
     <h6>Розповісти всім:
-      <a href="https://vk.com/#wall"><img src="images/VKontakte.svg" alt="VK" class="media_button"></a>
-      <a href="https://twitter.com/home"><img src="images/Twitter.svg" alt="Twitter" class="media_button"></a>
-      <a href="https://facebook.com/#page/posts"><img src="images/Facebook.svg" alt="Facebook" class="media_button"></a>
+      <a href="https://vk.com/#wall">
+        <img src="images/VKontakte.svg" alt="VK" class="media_button">
+      </a>
+      <a href="https://twitter.com/home">
+        <img src="images/Twitter.svg" alt="Twitter" class="media_button">
+      </a>
+      <a href="https://facebook.com/#page/posts">
+        <img src="images/Facebook.svg" alt="Facebook" class="media_button">
+      </a>
     </h6>
   </footer>
 </body>
-
+<script src="https://kit.fontawesome.com/f60fb1f43a.js" crossorigin="anonymous"></script>
 <script src="scripts/main.js"></script>
 <script src="scripts/wow.min.js"></script>
 <script>
