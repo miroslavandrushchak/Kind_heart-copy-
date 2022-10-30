@@ -1143,12 +1143,12 @@ textarea {
   line-height: 50px;
 }
 
-.logo_bank_transition {
+#logo_bank_transition {
   pointer-events: all;
   opacity: 1;
 }
 
-.logo_bank_transition.remove_logo_bank_transition {
+#logo_bank_transition.remove_logo_bank_transition {
   pointer-events: none;
   opacity: 0;
 }
