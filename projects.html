@@ -17,21 +17,23 @@
   <header class="header">
     <a href="index.html"><img src="images/Logo.svg" alt="Reload" class="mini_logo"></a>
     <div class="language">
-      <a href="#" class="language_change">УКР</a> <a href=" #" class="language_change">РУС</a> <a href="#"
-        class="language_change">ENG</a>
+      <a href="#" class="language_change">УКР</a>
+      <a href="#" class="language_change">РУС</a>
+      <a href="#" class="language_change">ENG</a>
     </div>
     <div class="about_site">
-      <a href="#" class="project_button">Проекти</a> <a href="#" class="about_site_buttons">Архів</a> <a href="#"
-        class="about_site_buttons">Контакти</a> <a href="#" class="urgent_help" class="about_site_buttons">Термінова
-        допомога</a>
+      <a href="#" class="project_button">Проекти</a> 
+      <a href="archive.html" class="about_site_buttons">Архів</a> 
+      <a href="#" class="about_site_buttons">Контакти</a>
+      <a href="urgent help.html" class="urgent_help" class="about_site_buttons">Термінова допомога</a>
     </div>
     <div class="user">
       <a class="login">Вхід</a>
       <a>|</a>
       <a class="registration">Зареєструватися</a>
     </div>
+    <div class="progress_bar" id="progress_bar"></div>
   </header>
-
   <div class="login_popup">
     <form class="login_popup_form">
       <h2 class="close_login_window">Закрити</h2>
@@ -55,7 +57,6 @@
       <button type="submit" class="data_submit">Увійти</button>
     </form>
   </div>
-
   <div class="registration_popup">
     <form class="registration_popup_form" type="submit">
       <h2 class="close_registration_window">Закрити</h2>
@@ -86,32 +87,126 @@
       <button type="submit" class="new_data_submit">Зареєструватися</button>
     </form>
   </div>
-
   <div class="topics">
     <a href="#" class="topic">Війна</a>
     <a href="#" class="topic">Діти</a>
     <a href="#" class="topic">Екологія</a>
     <a href="#" class="topic">Освіта</a>
   </div>
-
   <div class="kinds_of_help">
-    <h6 class="kind_of_help">Види допомоги:</h6>
-    <select class="help_button">
-      <option value=""></option>
-    </select>
+    <h6 class="kind_of_help">Види допомоги:
+      <a href="#" class="transition_button">
+        <img src="images/How you can help.svg" alt="">
+      </a>
+    </h6>
   </div>
-
   <div class="content">
-
+    <ul class="current_projects">
+      <li class="current_project first_project">
+        <img src="images/Projects (photos)/Kids.png" alt="" class="kids_photos kid_photo_1" width="300px"
+          height="175px">
+        <div class="first_project_text_block">
+          <h6 class="current_projects_data">07.05.2017</h6>
+          <h2 class="current_projects_topic project_topic_1">Необхідна допомога дитячому будинку -
+            <img src="images/How you can help.svg" tabindex="0" width="33px" height="33px" class="content_open_button">
+          </h2>
+          <p class="first_project_description">
+            Перебуваючи у сиротинцях ці діти мають різного роду матеріальні та нематеріальні потреби, якими зазвичай
+            ніхто не займається. Ті, хто має займатися утриманням дитячих будинків, опікою над дітьми часто забувають
+            про свій обов’язок або
+            ж отримують недостатнє фінансування від держави. Тому вся надія цих діточок покладається на небайдужих
+            людей, волонтерів, благодійні фонди.
+          </p>
+        </div>
+        <div class="help_now_titles first_project_help_ways">
+          <img class="help_now_button do_help" tabindex="0" src="images/Help now (logos)/Do.svg" width="33px"
+            height="33px">
+          <img class="help_now_button finance_help" tabindex="0" src="images/Help now (logos)/Finance help.svg"
+            width="33px" height="33px">
+          <img class="help_now_button material_help" tabindex="0" src="images/Help now (logos)/Material help.svg"
+            width="33px" height="33px">
+          <img class="help_now_button volunteering_help" tabindex="0" src="images/Help now (logos)/Volunteering.svg"
+            width="33px" height="33px">
+        </div>
+      </li>
+      <li class="current_project second_project">
+        <img src="images/Projects (photos)/Kids 2.png" alt="" class="kids_photos kid_photo_2" width="300px"
+          height="175px">
+        <div class="second_project_text_block">
+          <h6 class="current_projects_data">04.05.2017 - (ТЕРМІНОВО)</h6>
+          <h2 class="current_projects_topic project_topic_1">Операція дитині, яка постраждала в зоні АТО -
+            <img src="images/How you can help.svg" tabindex="0" width="33px" height="33px" class="content_open_button">
+          </h2>
+          <p class="second_project_description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis accusantium atque consectetur deleniti
+            consequuntur adipisci assumenda animi aut cumque quia exercitationem quis possimus praesentium
+            ab iusto eius, eligendi quasi laborum voluptatum esse fuga.
+          </p>
+        </div>
+        <div class="help_now_titles second_project_help_ways">
+          <img class="help_now_button do_help" tabindex="0" src="images/Help now (logos)/Do.svg" width="33px"
+            height="33px">
+          <img class="help_now_button finance_help" tabindex="0" src="images/Help now (logos)/Finance help.svg"
+            width="33px" height="33px">
+          <img class="help_now_button volunteering_help" tabindex="0" src="images/Help now (logos)/Volunteering.svg"
+            width="33px" height="33px">
+        </div>
+      </li>
+      <li class="current_project third_project">
+        <img src="images/Projects (photos)/Kids 3.png" alt="" class="kids_photos kid_photo_3" width="300px"
+          height="175px">
+        <div class="third_project_text_block">
+          <h6 class="current_projects_data">03.01.2017</h6>
+          <h2 class="current_projects_topic project_topic_3">Освітній загальний курс з основ WEB технологій для школярів -
+            <img src="images/How you can help.svg" tabindex="0" width="33px" height="33px" class="content_open_button">
+          </h2>
+          <p class="third_project_description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptate facilis ex quas necessitatibus repudiandae minus cum consequatur doloremque eligendi. Animi.
+          </p>
+        </div>
+        <div class="help_now_titles third_project_help_ways">
+          <img class="help_now_button do_help" tabindex="0" src="images/Help now (logos)/Do.svg" width="33px"
+            height="33px">
+          <img class="help_now_button material_help" tabindex="0" src="images/Help now (logos)/Material help.svg"
+            width="33px" height="33px">
+          <img class="help_now_button volunteering_help" tabindex="0" src="images/Help now (logos)/Volunteering.svg"
+            width="33px" height="33px">
+        </div>
+      </li>
+      <li class="current_project fourth_project">
+        <img src="images/Projects (photos)/Kids 4.png" alt="" class="kids_photos kid_photo_4" width="300px"
+          height="175px">
+        <div class="fourth_project_text_block">
+          <h6 class="current_projects_data">03.05.2017</h6>
+          <h2 class="current_projects_topic project_topic_4">Будування дитячого майданчику у місті Київ -
+            <img src="images/How you can help.svg" tabindex="0" width="33px" height="33px" class="content_open_button">
+          </h2>
+          <p class="fourth_project_description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, maxime.
+          </p>
+        </div>
+        <div class="help_now_titles fourth_project_help_ways">
+          <img class="help_now_button do_help" tabindex="0" src="images/Help now (logos)/Do.svg" width="33px"
+            height="33px">
+          <img class="help_now_button finance_help" tabindex="0" src="images/Help now (logos)/Finance help.svg"
+            width="33px" height="33px">
+          <img class="help_now_button material_help" tabindex="0" src="images/Help now (logos)/Material help.svg"
+            width="33px" height="33px">
+          <img class="help_now_button volunteering_help" tabindex="0" src="images/Help now (logos)/Volunteering.svg"
+            width="33px" height="33px">
+        </div>
+      </li>
+    </ul>
   </div>
 
   <div class="chat">
-    <a href="#">
+    <a>
       <img src="images/Chat.svg">
     </a>
   </div>
 </body>
 
-<script src="scripts/main.js"></script>
+<script src="scripts/projects.js"></script>
 
 </html>
