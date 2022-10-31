@@ -3,35 +3,35 @@
 <html lang="ua">
 
 <head>
-    <title>Urgent help</title>
+    <title>Contacts</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/urgent help.css">
+    <link rel="stylesheet" href="styles/contacts.css">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/fonts.css">
 </head>
 
 <body>
+
     <header class="header">
-        <a href="index.html"><img src="images/Logo (white).svg" alt="Reload" class="mini_logo"></a>
+        <a href="index.html"><img src="images/Logo.svg" alt="Reload" class="mini_logo"></a>
         <div class="language">
             <a href="#" class="language_change">УКР</a>
-            <a href="#" class="language_change">РУС</a>
+            <a href=" #" class="language_change">РУС</a>
             <a href="#" class="language_change">ENG</a>
         </div>
         <div class="about_site">
             <a href="projects.html" class="about_site_buttons">Проекти</a>
             <a href="archive.html" class="about_site_buttons">Архів</a>
-            <a href="#" class="about_site_buttons">Контакти</a>
-            <a href="#" class="urgent_help project_button">Термінова допомога</a>
+            <a href="#" class="project_button">Контакти</a>
+            <a href="urgent help.html" class="urgent_help">Термінова допомога</a>
         </div>
         <div class="user">
             <a class="login">Вхід</a>
             <a>|</a>
             <a class="registration">Зареєструватися</a>
         </div>
-        <div class="progress_bar" id="progress_bar"></div>
     </header>
     <div class="login_popup">
         <form class="login_popup_form">
@@ -86,53 +86,44 @@
             <button type="submit" class="new_data_submit">Зареєструватися</button>
         </form>
     </div>
-    <div class="topics">
-        <a href="#" class="topic">Війна</a>
-        <a href="#" class="topic">Діти</a>
-        <a href="#" class="topic">Екологія</a>
-        <a href="#" class="topic">Освіта</a>
-    </div>
-    <div class="kinds_of_help">
-        <h6 class="kind_of_help">Види допомоги:
-            <a href="#" class="transition_button">
-                <img src="images/How you can help.svg" alt="">
-            </a>
-        </h6>
-    </div>
-    <div class="content">
-        <ul class="current_projects" id="content_anchor">
-            <li class="current_project first_project">
-                <img src="images/Projects (photos)/Kids 2.png" alt="" class="kids_photos kid_photo_1" width="300px"
-                    height="175px">
-                <div class="first_project_text_block">
-                    <h6 class="current_projects_data">04.05.2017 - (ТЕРМІНОВО)</h6>
-                    <h2 class="current_projects_topic project_topic_1">Операція дитині, яка постраждала в зоні АТО -
-                        <img src="images/How you can help.svg" tabindex="0" width="33px" height="33px"
-                            class="content_open_button">
-                    </h2>
-                    <p class="first_project_description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis accusantium atque consectetur
-                        deleniti
-                        consequuntur adipisci assumenda animi aut cumque quia exercitationem quis possimus praesentium
-                        ab iusto eius, eligendi quasi laborum voluptatum esse fuga.
-                    </p>
-                </div>
-                <div class="help_now_titles first_project_help_ways">
-                    <img class="help_now_button do_help" tabindex="0" src="images/Help now (logos)/Do.svg" width="33px"
-                        height="33px">
-                    <img class="help_now_button finance_help" tabindex="0"
-                        src="images/Help now (logos)/Finance help.svg" width="33px" height="33px">
-                    <img class="help_now_button volunteering_help" tabindex="0"
-                        src="images/Help now (logos)/Volunteering.svg" width="33px" height="33px">
-                </div>
-            </li>
-        </ul>
+    <div class="contact_content">
+        <div class="contacts_ardesses">
+            <h1 class="contacts">
+                <a href="tel:380777777777">
+                    +38 (077) 777 77 77
+                </a>
+                <a href="mailto:help@kindheart.ua">
+                    help@kindheart.ua
+                </a>
+            </h1>
+        </div>
+        <h6 class="form_describe">Заповніть своє ім’я і контактні дані, і Вам нададуть консультацію по телефону</h6>
+        <form class="contact_form">
+            <input type="text" placeholder="Ім'я" name="users_name" class="input_help_now_form">
+            <input type="text" placeholder="Телефон" name="users_phone" class="input_help_now_form">
+            <button type="submit" class="submit_button">Відправити</button>
+        </form>
     </div>
     <div class="chat">
         <a><img src="images/Chat.svg"></a>
     </div>
+    <footer class="repost">
+        <h6 class="repost_text">Розповісти про проект
+            <div class="repost_logo_block">
+                <a href="https://vk.com/#wall">
+                    <img src="images/VKontakte.svg" alt="VK" class="media_button">
+                </a>
+                <a href="https://twitter.com/home">
+                    <img src="images/Twitter.svg" alt="Twitter" class="media_button">
+                </a>
+                <a href="https://facebook.com/#page/posts">
+                    <img src="images/Facebook.svg" alt="Facebook" class="media_button">
+                </a>
+            </div>
+        </h6>
+    </footer>
 </body>
 
-<script src="scripts/urgent help.js"></script>
+<script src="scripts/contacts.js"></script>
 
 </html>
