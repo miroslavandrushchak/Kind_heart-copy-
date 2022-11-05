@@ -7,6 +7,17 @@ if (navigator.userAgent.includes("Chrome")) {
 console.log(navigator.platform);
 console.log(location.href);
 
+function progressBar() {
+  let scroll = document.body.scrollTop || document.documentElement.scrollTop;
+  let height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  let scrolled = (scroll / height) * 100;
+
+  document.getElementById("progress_bar").style.width = scrolled + "%";
+}
+window.addEventListener("scroll", progressBar);
+
 let usersLogin = document.querySelectorAll(".login");
 let loginPopupBackground = document.querySelector(".login_popup");
 let loginPopupForm = document.querySelector(".login_popup_form");
@@ -70,17 +81,6 @@ aArray.forEach(element => {
     chatPopupForm.classList.remove("active_chat_form");
   });
 });
-
-function progressBar() {
-  let scroll = document.body.scrollTop || document.documentElement.scrollTop;
-  let height =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-  let scrolled = (scroll / height) * 100;
-
-  document.getElementById("progress").style.width = scrolled + "%";
-}
-window.addEventListener("scroll", progressBar);
 
 let helpNow = document.querySelectorAll(".help_now");
 let helpNowBackground = document.querySelector(".help_now_background");
