@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="ua">
+
+<head>
+    <title>Contacts</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/contacts.css">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="../index.html"><img src="../images/Logo.svg" alt="Reload" class="mini_logo"></a>
+        <div class="language">
+            <a href="#" class="language_change">УКР</a>
+            <a href=" #" class="language_change">РУС</a>
+            <a href="#" class="language_change">ENG</a>
+        </div>
+        <div class="about_site">
+            <a href="projects.html" class="about_site_buttons">Проекти</a>
+            <a href="archive.html" class="about_site_buttons">Архів</a>
+            <a href="#" class="project_button">Контакти</a>
+            <a href="urgent help.html" class="urgent_help">Термінова допомога</a>
+        </div>
+        <div class="user">
+            <a class="login">Вхід</a>
+            <a>|</a>
+            <a class="registration">Зареєструватися</a>
+        </div>
+    </header>
+    <div class="login_popup">
+        <form class="login_popup_form">
+            <h2 class="close_login_window">Закрити</h2>
+            <h2 class="login_text">Вхід</h2>
+            <div class="data_block">
+                <img src="../images/Logo.svg" alt="Welcome" class="mini_logo_in_login_form" width="100px">
+                <label>
+                    <input type="text" name="users_login">
+                    <div class="label_of_data">
+                        Логін
+                    </div>
+                </label>
+                <br>
+                <label>
+                    <input type="text" name="users_password">
+                    <div class="label_of_data">
+                        Пароль
+                    </div>
+                </label>
+            </div>
+            <button type="submit" class="data_submit">Увійти</button>
+        </form>
+    </div>
+    <div class="registration_popup">
+        <form class="registration_popup_form" type="submit">
+            <h2 class="close_registration_window">Закрити</h2>
+            <h2 class="registration_text">Реєстрація</h2>
+            <div class="new_data_block">
+                <img src="../images/Logo.svg" alt="Welcome" class="mini_logo_in_registration_form" width="250px">
+                <label>
+                    <input type="text" name="new_users_contact">
+                    <div class="label_of_new_data">
+                        Електронна пошта або номер телефону
+                    </div>
+                </label>
+                <br>
+                <label>
+                    <input type="text" name="new_users_login">
+                    <div class="label_of_new_data">
+                        Логін
+                    </div>
+                </label>
+                <br>
+                <label>
+                    <input type="text" name="new_users_password">
+                    <div class="label_of_new_data">
+                        Пароль
+                    </div>
+                </label>
+            </div>
+            <button type="submit" class="new_data_submit">Зареєструватися</button>
+        </form>
+    </div>
+    <div class="contact_content">
+        <div class="contacts_ardesses">
+            <h1 class="contacts">
+                <a href="tel:380777777777">
+                    +38 (077) 777 77 77
+                </a>
+                <a href="mailto:help@kindheart.ua">
+                    help@kindheart.ua
+                </a>
+            </h1>
+        </div>
+        <h6 class="form_describe">Заповніть своє ім’я і контактні дані, і Вам нададуть консультацію по телефону</h6>
+        <form class="contact_form">
+            <input type="text" placeholder="Ім'я" name="users_name" class="input_help_now_form">
+            <input type="text" placeholder="Телефон" name="users_phone" class="input_help_now_form">
+            <button type="submit" class="submit_button">Відправити</button>
+        </form>
+    </div>
+    <div class="chat">
+        <a><img src="../images/Chat.svg"></a>
+    </div>
+    <footer class="repost">
+        <h6 class="repost_text">Розповісти про проект
+            <div class="repost_logo_block">
+                <a href="https://vk.com/#wall">
+                    <img src="../images/VKontakte.svg" alt="VK" class="media_button">
+                </a>
+                <a href="https://twitter.com/home">
+                    <img src="../images/Twitter.svg" alt="Twitter" class="media_button">
+                </a>
+                <a href="https://facebook.com/#page/posts">
+                    <img src="../images/Facebook.svg" alt="Facebook" class="media_button">
+                </a>
+            </div>
+        </h6>
+    </footer>
+</body>
+
+<script src="../scripts/contacts.js"></script>
+
+</html>

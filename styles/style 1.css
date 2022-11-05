@@ -435,7 +435,7 @@ textarea {
 .mini_logo_in_login_form {
   position: relative;
   float: right;
-  top: 60px;
+  top: 32px;
   left: 15px;
   animation: miniheart_beat .5s 7 alternate;
   animation-delay: 1.5s;
@@ -517,7 +517,7 @@ textarea {
 .mini_logo_in_registration_form {
   position: relative;
   float: right;
-  top: 60px;
+  top: 32px;
   left: -50px;
   animation: miniheart_beat .33s infinite alternate;
   animation-delay: 1.5s;
