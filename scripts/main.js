@@ -13,7 +13,6 @@ function progressBar() {
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight;
   let scrolled = (scroll / height) * 100;
-
   document.getElementById("progress_bar").style.width = scrolled + "%";
 }
 window.addEventListener("scroll", progressBar);
@@ -22,7 +21,6 @@ let usersLogin = document.querySelectorAll(".login");
 let loginPopupBackground = document.querySelector(".login_popup");
 let loginPopupForm = document.querySelector(".login_popup_form");
 let closeLoginWindow = document.querySelector(".close_login_window");
-
 usersLogin.forEach((loginButton) => {
   loginButton.addEventListener("click", (login) => {
     loginPopupBackground.classList.add("active_login_form");
@@ -44,7 +42,6 @@ let usersRegistration = document.querySelectorAll(".registration");
 let registrationPopupBackground = document.querySelector(".registration_popup");
 let registrationPopupForm = document.querySelector(".registration_popup_form");
 let closeRegistrationWindow = document.querySelector(".close_registration_window");
-
 usersRegistration.forEach((button) => {
   button.addEventListener("click", (registration) => {
     registrationPopupBackground.classList.add("active_registration_form");
@@ -65,7 +62,6 @@ document.addEventListener("click", (registration) => {
 let chatPopupOpen = document.querySelectorAll(".chat_block");
 let chatPopupForm = document.querySelector(".chat_popup_form");
 let closeChatButton = document.querySelector(".close_chat_window");
-
 chatPopupOpen.forEach((chatButton) => {
   chatButton.addEventListener("click", () => {
     chatPopupForm.classList.toggle("active_chat_form");
@@ -85,7 +81,6 @@ aArray.forEach(element => {
 let helpNow = document.querySelectorAll(".help_now");
 let helpNowBackground = document.querySelector(".help_now_background");
 let helpNowWindow = document.querySelector(".help_now_popup");
-
 helpNow.forEach((help) => {
   help.addEventListener("click", () => {
     helpNowBackground.classList.add("active_help_now_window");
@@ -111,64 +106,38 @@ let financeHelpWindow = document.querySelector(".finance_help_window");
 let financeHelpButton = document.querySelectorAll(".finance_help");
 let financeHelpButtonActivate = document.querySelector(".finance_help");
 let financeHelpNowForms = document.querySelector(".finance_help_now_forms");
-
-financeHelpButton.forEach((financeHelpFormOpen) => {
-  financeHelpFormOpen.addEventListener("click", () => {
-    financeHelpWindow.classList.add("active_finance_help_window");
-    helpNowWindow.classList.add("active_help_now_popup_scroll");
-  });
-});
-
-document.addEventListener("click", (financeHelpFormClose) => {
-  if (financeHelpFormClose.target === helpNowWindow) {
-    financeHelpWindow.classList.remove("active_finance_help_window");
-    helpNowWindow.classList.remove("active_help_now_popup_scroll");
-  }
-  if (financeHelpFormClose.target === helpNowBackground) {
-    financeHelpWindow.classList.remove("active_finance_help_window");
-    helpNowWindow.classList.remove("active_help_now_popup_scroll");
-  }
-});
-
-let files = document.getElementById("add_logo_file");
-
-files.addEventListener('change', function() {
-  let arrayFiles = this.files,
-      formItem = this.parentNode,
-      listFiles = document.createElement('p'),
-      li = '';
-  
-  if (formItem.querySelector('.help_now_logo_file')) {
-    formItem.querySelector('.help_now_logo_file').remove();
-  }
-  
-  listFiles.className = 'help_now_logo_file';
-  
-  for (let i = 0; i < arrayFiles.length; i++) {
-    li +=  arrayFiles[i].name;
-  }
-  
-  listFiles.innerHTML = li;
-  
-  formItem.appendChild(listFiles);  
-});
-
 let financeHelpNowFormFirstBlock = document.querySelector(".help_now_form_first_block"),
 financeHelpNowFormSecondBlock = document.querySelector(".help_now_form_second_block"),
 financeHelpNowFormThirdBlock = document.querySelector(".help_now_form_third_block"),
 financeHelpNowFormFourthBlock = document.querySelector(".help_now_form_fourth_block");
-
 let persons = document.querySelector(".persons");
 let personForms = document.querySelector(".person_forms");
 let individualPersonButton = document.querySelector(".individual_person_button");
 let legalPersonButton = document.querySelector(".legal_person_button");
-
 let logoBankTransition = document.getElementById("logo_bank_transition"),
 logoterminalsOfUkraine = document.getElementById("logo_terminals_of_Ukraine"),
 logoWebMoney = document.getElementById("logo_WebMoney"),
 logoPayPal = document.getElementById("logo_PayPal"),
 logoPrivatbank = document.getElementById("logo_Privatbank"),
 logoVisaMastercard = document.getElementById("logo_Visa_MasterCard");
+financeHelpButton.forEach((financeHelpFormOpen) => {
+  financeHelpFormOpen.addEventListener("click", () => {
+    financeHelpWindow.classList.add("active_finance_help_window");
+    helpNowWindow.classList.add("active_help_now_popup_scroll");
+    persons.classList.add("active_persons");
+    individualPersonButton.classList.add("active_individual_person_button");
+    legalPersonButton.classList.remove("active_legal_person_button");
+    financeHelpNowForms.classList.add("active_finance_help_now_forms");
+    financeHelpNowFormThirdBlock.classList.remove("active_help_now_form_third_block");
+    financeHelpNowFormFourthBlock.classList.remove("active_help_now_form_fourth_block");
+    logoBankTransition.classList.add("remove_logo_bank_transition");
+    financeHelpButtonActivate.classList.add("active_finance_help");
+    financeHelpButton2.classList.add("active_finance_help_2");
+    helpNowFaArrowFinanceHelp.classList.add("active_fa-arrow-finance-help");
+    creditCardDataBlock.classList.add("active_credit_card_data_block");
+    logoPrivatbank.classList.add("active_logo_Privatbank");
+  });
+});
 
 persons.addEventListener("click", (openForm) => {
   if (openForm.target === individualPersonButton) {
@@ -192,9 +161,8 @@ persons.addEventListener("click", (openForm) => {
 });
 
 let creditCardDataBlock = document.querySelector(".credit_card_data_block");
-
-logoPrivatbank.addEventListener("click", (fffff) => {
-  if (fffff.target = logoPrivatbank)
+logoPrivatbank.addEventListener("click", (logoPrivatBankActive) => {
+  if (logoPrivatBankActive.target = logoPrivatbank)
     creditCardDataBlock.classList.add("active_credit_card_data_block");
     logoPrivatbank.classList.add("active_logo_Privatbank");
 });
@@ -203,12 +171,10 @@ let doHelpButton2 = document.querySelector(".do_help_2"),
 financeHelpButton2 = document.querySelector(".finance_help_2"),
 materialHelpButton2 = document.querySelector(".material_help_2"),
 volunteeringHelpButton2 = document.querySelector(".volunteering_help_2");
-
 let helpNowFaArrowDoHelp = document.querySelector(".fa-arrow-do-help"),
 helpNowFaArrowFinanceHelp = document.querySelector(".fa-arrow-finance-help"),
 helpNowFaArrowMaterialHelp = document.querySelector(".fa-arrow-material-help"),
 helpNowFaArrowVolunteeringHelp = document.querySelector(".fa-arrow-volunteering-help");
-
 financeHelpButtonActivate.addEventListener("click", (financeHelpButtonColorChange) => {
   if (financeHelpButtonColorChange.target === financeHelpButtonActivate) {
     financeHelpButtonActivate.classList.add("active_finance_help");
@@ -225,4 +191,32 @@ financeHelpButtonActivate.addEventListener("click", (financeHelpButtonColorChang
     financeHelpButton2.classList.remove("active_finance_help_2");
     helpNowFaArrowFinanceHelp.classList.remove("active_fa-arrow-finance-help");
   }
+});
+
+document.addEventListener("click", (financeHelpFormClose) => {
+  if (financeHelpFormClose.target === helpNowWindow) {
+    financeHelpWindow.classList.remove("active_finance_help_window");
+    helpNowWindow.classList.remove("active_help_now_popup_scroll");
+  }
+  if (financeHelpFormClose.target === helpNowBackground) {
+    financeHelpWindow.classList.remove("active_finance_help_window");
+    helpNowWindow.classList.remove("active_help_now_popup_scroll");
+  }
+});
+
+let files = document.getElementById("add_logo_file");
+files.addEventListener('change', function() {
+  let arrayFiles = this.files,
+      formItem = this.parentNode,
+      listFiles = document.createElement('p'),
+      li = '';
+  if (formItem.querySelector('.help_now_logo_file')) {
+    formItem.querySelector('.help_now_logo_file').remove();
+  }
+  listFiles.className = 'help_now_logo_file';
+  for (let i = 0; i < arrayFiles.length; i++) {
+    li +=  arrayFiles[i].name;
+  }
+  listFiles.innerHTML = li;
+  formItem.appendChild(listFiles);  
 });
