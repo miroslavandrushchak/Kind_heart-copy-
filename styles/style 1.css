@@ -835,7 +835,6 @@ textarea {
 }
 
 .input_help_now_form {
-  border: 2px solid #c5d5e680;
   border-radius: 5px;
   height: 33px;
   width: 99%;
@@ -845,6 +844,12 @@ textarea {
   background-color: #c5d5e680;
   color: #363B5D;
 }
+
+.number_of_card_block>.input_help_now_form {
+  margin-right: 10px;
+}
+
+
 
 .help_now_form_first_block,
 .help_now_form_second_block {
@@ -874,11 +879,7 @@ textarea {
   flex-direction: column;
   flex-wrap: nowrap;
   direction: rtl;
-  outline: 2px solid #C5D5E6;
-  padding-left: 5px;
-  padding-right: 2.5px;
-  padding-top: 2.5px;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: -5px;
   border-radius: 5px;
   line-height: 10px;
@@ -915,7 +916,7 @@ textarea {
   font-family: 'Geometria';
   color: #4A90E2;
   min-width: 75px;
-  top: 480px;
+  top: 475px;
   left: 42.5%;
   border-radius: 3px;
   padding: 2.5px;
@@ -928,7 +929,7 @@ textarea {
   font-family: 'Geometria';
   margin-left: 39%;
   left: 50px;
-  top: 67.5%;
+  top: 65%;
   width: 10px;
   font-family: 'Geometria';
   pointer-events: none;
@@ -957,20 +958,15 @@ textarea {
   width: 33px;
   border-radius: 20px;
   left: 44.5%;
-  top: 507.5px;
+  top: 510px;
   opacity: 1;
   z-index: -100;
 }
 
-.help_now_form_data>.help_now_new_data_submit_button {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  top: 200%;
-}
-
 .help_now_new_data_submit_button {
-  position: absolute;
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 633px;
   font-size: 18px;
   font-weight: 750;
   font-family: 'Geometria';
@@ -990,16 +986,10 @@ textarea {
 .hover_arrow_blocks {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 11px;
   margin-left: 29px;
   margin-right: 233px;
-}
-
-.fa-arrow-up {
-  color: #9C5D9A;
-  border-bottom: 4px solid #9D5E9A;
-  padding-bottom: 4px;
-  font-size: 4vmin;
+  z-index: -1000;
 }
 
 .fa-arrow-do-help,
@@ -1018,8 +1008,9 @@ textarea {
 .fa-arrow-volunteering-help.active_fa-arrow-volunteering-help {
   pointer-events: all;
   opacity: 1;
-  margin-bottom: 0px;
+  margin-bottom: -20px;
   margin-top: 15px;
+  z-index: -1000;
 }
 
 .help_now_pay_block {
@@ -1027,6 +1018,7 @@ textarea {
   border-radius: 20px;
   padding: 0px;
   height: 320px;
+  z-index: 1000;
 }
 
 .label_of_new_card_data {
@@ -1071,6 +1063,12 @@ textarea {
   margin-top: -20px;
 }
 
+.number_of_card_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .number_of_card {
   display: flex;
   width: 100%;
@@ -1081,7 +1079,7 @@ textarea {
 
 .validity_of_card,
 .card_verification_value {
-  width: 33%;
+  width: 32%;
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1207,8 +1205,7 @@ textarea {
 .material_help_2.active_material_help_2,
 .volunteering_help_2.active_volunteering_help_2 {
   background-color: #9C5D9A;
-  border-radius: 20px;
-  padding: 3px;
+  border-radius: 16.5px;
 }
 
 .help_now_title_fonts_2 {

@@ -7,7 +7,7 @@
   <title>Kind heart</title>
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/style 1.css" type="text/css">
-  <link rel="stylesheet" href="styles/fonts.css">
+  <link rel="stylesheet" href="styles/fonts.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
@@ -289,39 +289,39 @@
                 <div class="help_now_pay">
                   <h6 class="kinds_of_help_change" tabindex="0">Ви можете змінити вид допомоги</h6>
                   <div class="help_now_items">
-                    <div class="help_now_variants_2 do_help_2">
+                    <div class="help_now_variants_2">
                       <div class="help_now_titles">
-                        <img class="help_now_button do_help" tabindex="0" src="images/Help now (logos)/Do.svg" alt="">
+                        <img class="help_now_button do_help do_help_2" tabindex="0" src="images/Help now (logos)/Do.svg" alt="">
                         <h1 class="help_now_title_fonts_2">Зробити</h1>
                       </div>
                     </div>
-                    <div class="help_now_variants_2 finance_help_2">
+                    <div class="help_now_variants_2">
                       <div class="help_now_titles">
-                        <img class="help_now_button finance_help" tabindex="0"
+                        <img class="help_now_button finance_help finance_help_2" tabindex="0"
                           src="images/Help now (logos)/Finance help.svg" alt="">
                         <h1 class="help_now_title_fonts_2">Фінансова допомога</h1>
                       </div>
                     </div>
-                    <div class="help_now_variants_2 material_help_2">
+                    <div class="help_now_variants_2">
                       <div class="help_now_titles">
-                        <img class="help_now_button material_help" tabindex="0"
+                        <img class="help_now_button material_help material_help_2" tabindex="0"
                           src="images/Help now (logos)/Material help.svg" alt="">
                         <h1 class="help_now_title_fonts_2">Матеріальна допомога</h1>
                       </div>
                     </div>
-                    <div class="help_now_variants_2 volunteering_help_2">
+                    <div class="help_now_variants_2">
                       <div class="help_now_titles">
-                        <img class="help_now_button volunteering_help" tabindex="0"
+                        <img class="help_now_button volunteering_help volunteering_help_2" tabindex="0"
                           src="images/Help now (logos)/Volunteering.svg" alt="">
                         <h1 class="help_now_title_fonts_2">Волонтерство</h1>
                       </div>
                     </div>
                   </div>
                   <div class="hover_arrow_blocks">
-                    <i class="fa-solid fa-arrow-up fa-arrow-do-help"></i>
-                    <i class="fa-solid fa-arrow-up fa-arrow-finance-help"></i>
-                    <i class="fa-solid fa-arrow-up fa-arrow-material-help"></i>
-                    <i class="fa-solid fa-arrow-up fa-arrow-volunteering-help"></i>
+                    <img src="images/Ways of pay (logos)/Triangle for transition of way.svg" class="fa-arrow-do-help" width="33px">
+                    <img src="images/Ways of pay (logos)/Triangle for transition of way.svg" class="fa-arrow-finance-help" width="33px">
+                    <img src="images/Ways of pay (logos)/Triangle for transition of way.svg" class="fa-arrow-material-help" width="33px">
+                    <img src="images/Ways of pay (logos)/Triangle for transition of way.svg" class="fa-arrow-volunteering-help" width="33px">
                   </div>
                   <div class="help_now_pay_block">
                     <h6 class="ways_of_pay_denotation" tabindex="0">Способи оплати</h6>
@@ -362,8 +362,13 @@
                         <label class="label_registration_help number_of_card">
                           <div name="number_of_card" class="label_of_new_card_data">
                             Номер картки
+                            <div name="number_of_card" class="number_of_card_block">
+                              <input type="text" class="input_help_now_form" maxlength="4">
+                              <input type="text" class="input_help_now_form" maxlength="4">
+                              <input type="text" class="input_help_now_form" maxlength="4">
+                              <input type="text" class="input_help_now_form" maxlength="4">
+                            </div>
                           </div>
-                          <input type="text" class="input_help_now_form" maxlength="16">
                         </label>
                         <label for="" class="label_registration_help validity_of_card">
                           <div name="validity_of_card" class="label_of_new_card_data">
@@ -381,12 +386,12 @@
                     </div>
                   </div>
                 </div>
-                <button type="button" class="help_now_new_data_submit_button">Допомогти</button>
               </form>
             </div>
           </div>
         </div>
       </div>
+      <button type="button" class="help_now_new_data_submit_button">Допомогти</button>
     </div>
   </div>
   <div data-wow-duration="2.5s" class="wow animate__animated animate__fadeInRight"><img src="images/Heart isometry.svg"
