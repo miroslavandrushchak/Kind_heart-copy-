@@ -983,38 +983,119 @@ textarea {
   width: 100%;
 }
 
-.hover_arrow_blocks {
+.hover_arrow_block {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 11px;
-  margin-left: 29px;
-  margin-right: 233px;
-  z-index: -1000;
+  margin-right: 33px;
+  margin-top: 33px;
 }
 
-.fa-arrow-do-help,
-.fa-arrow-finance-help,
-.fa-arrow-material-help,
-.fa-arrow-volunteering-help {
-  pointer-events: none;
-  opacity: 0;
-  margin-bottom: -50px;
-  margin-top: 0px;
+.top_arrow_do_help::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: -15px 2.5%;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid #ffffff;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
 }
 
-.fa-arrow-do-help.active_fa-arrow-do-help,
-.fa-arrow-finance-help.active_fa-arrow-finance-help,
-.fa-arrow-material-help.active_fa-arrow-material-help,
-.fa-arrow-volunteering-help.active_fa-arrow-volunteering-help {
-  pointer-events: all;
-  opacity: 1;
-  margin-bottom: -20px;
-  margin-top: 15px;
-  z-index: -1000;
+.top_arrow_do_help::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: -20px 2.5%;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid #C5D5E6;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+
+.top_arrow_finance_help::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: -15px 27.5%;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid #ffffff;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+
+.top_arrow_finance_help::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: -20px 27.5%;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid #C5D5E6;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+
+.top_arrow_material_help::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: -15px 52.5%;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid #ffffff;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+
+.top_arrow_material_help::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: -20px 52.5%;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid #C5D5E6;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+
+.top_arrow_volunteering_help::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: -15px 77.5%;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid #ffffff;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+
+.top_arrow_volunteering_help::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: -20px 77.5%;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid #C5D5E6;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
 }
 
 .help_now_pay_block {
-  border: 3px solid #c5d5e680;
+  border: 3px solid #c5d5e6;
   border-radius: 20px;
   padding: 0px;
   height: 320px;
@@ -1196,19 +1277,19 @@ textarea {
   color: #ffffff;
 }
 
-.help_now_variants_2 {
+.help_now_items_variants {
   width: 250px;
 }
 
-.do_help_2.active_do_help_2,
-.finance_help_2.active_finance_help_2,
-.material_help_2.active_material_help_2,
-.volunteering_help_2.active_volunteering_help_2 {
+.do_help_now_item.active_do_help_now_item,
+.finance_help_now_item.active_finance_help_now_item,
+.material_help_now_item.active_material_help_now_item,
+.volunteering_help_now_item.active_volunteering_help_now_item {
   background-color: #9C5D9A;
   border-radius: 16.5px;
 }
 
-.help_now_title_fonts_2 {
+.help_now_title_fonts_to_pay {
   font-family: 'Geometria';
   font-size: 1.33vmax;
   font-style: bold;
