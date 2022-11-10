@@ -132,11 +132,96 @@ financeHelpButton.forEach((financeHelpFormOpen) => {
     financeHelpNowFormFourthBlock.classList.remove("active_help_now_form_fourth_block");
     logoBankTransition.classList.add("remove_logo_bank_transition");
     financeHelpButtonActivate.classList.add("active_finance_help");
-    financeHelpButton2.classList.add("active_finance_help_2");
-    helpNowFaArrowFinanceHelp.classList.add("active_fa-arrow-finance-help");
+    financeHelpButtonNowItem.classList.add("active_finance_help_now_item");
+    document.querySelector(".top_arrow_finance_help").style.opacity = 1;
     creditCardDataBlock.classList.add("active_credit_card_data_block");
     logoPrivatbank.classList.add("active_logo_Privatbank");
   });
+});
+
+let doHelpButtonNowItem = document.querySelector(".do_help_now_item"),
+financeHelpButtonNowItem = document.querySelector(".finance_help_now_item"),
+materialHelpButtonNowItem = document.querySelector(".material_help_now_item"),
+volunteeringHelpButtonNowItem = document.querySelector(".volunteering_help_now_item");
+financeHelpButtonActivate.addEventListener("click", (financeHelpButtonColorChange) => {
+  if (financeHelpButtonColorChange.target === financeHelpButtonActivate) {
+    financeHelpButtonActivate.classList.add("active_finance_help");
+    financeHelpButtonNowItem.classList.add("active_finance_help_now_item");
+  }  
+  if (financeHelpButtonColorChange.target === helpNowWindow) {
+    financeHelpButtonActivate.classList.remove("active_finance_help");
+    financeHelpButtonNowItem.classList.remove("active_finance_help_now_item");
+  }
+  else if (financeHelpButtonColorChange.target === helpNowBackground) {
+    financeHelpButtonActivate.classList.remove("active_finance_help");
+    financeHelpButtonNowItem.classList.remove("active_finance_help_now_item");
+  }
+});
+
+let waysOfPayBlock = document.querySelector(".ways_of_pay_block"),
+waysOfPayDenotation = document.querySelector(".ways_of_pay_denotation");
+let helpNowDoBlock = document.querySelector(".help_now_do_block"),
+helpNowPayBlock = document.querySelector(".help_now_pay_block"),
+helpNowGiveBlock = document.querySelector(".help_now_give_block"),
+helpNowVolunteeringBlock = document.querySelector(".help_now_volunteering_block");
+
+document.addEventListener ("click", (changeKindOfHelpUnderUserForm) => {
+  if (changeKindOfHelpUnderUserForm.target === doHelpButtonNowItem) {
+    doHelpButtonNowItem.classList.add("active_do_help_now_item");
+    financeHelpButtonNowItem.classList.remove("active_finance_help_now_item");
+    materialHelpButtonNowItem.classList.remove("active_material_help_now_item");
+    volunteeringHelpButtonNowItem.classList.remove("active_volunteering_help_now_item");
+    waysOfPayBlock.classList.add("remove_ways_of_pay_block");
+    waysOfPayDenotation.classList.add("remove_ways_of_pay_denotation");
+    creditCardDataBlock.classList.remove("active_credit_card_data_block");
+    logoPrivatbank.classList.remove("active_logo_Privatbank");
+    helpNowDoBlock.classList.add("active_help_now_do_block");
+    helpNowPayBlock.classList.add("remove_help_now_pay_block");
+    helpNowGiveBlock.classList.remove("active_help_now_give_block");
+    helpNowVolunteeringBlock.classList.remove("active_help_now_volunteering_block");
+  }
+  else if (changeKindOfHelpUnderUserForm.target === financeHelpButtonNowItem) {
+    doHelpButtonNowItem.classList.remove("active_do_help_now_item");
+    financeHelpButtonNowItem.classList.add("active_finance_help_now_item");
+    materialHelpButtonNowItem.classList.remove("active_material_help_now_item");
+    volunteeringHelpButtonNowItem.classList.remove("active_volunteering_help_now_item");
+    waysOfPayBlock.classList.remove("remove_ways_of_pay_block");
+    waysOfPayDenotation.classList.remove("remove_ways_of_pay_denotation");
+    creditCardDataBlock.classList.add("active_credit_card_data_block");
+    logoPrivatbank.classList.add("active_logo_Privatbank");
+    helpNowDoBlock.classList.remove("active_help_now_do_block");
+    helpNowPayBlock.classList.remove("remove_help_now_pay_block");
+    helpNowGiveBlock.classList.remove("active_help_now_give_block");
+    helpNowVolunteeringBlock.classList.remove("active_help_now_volunteering_block");
+  }
+  else if (changeKindOfHelpUnderUserForm.target === materialHelpButtonNowItem) {
+    doHelpButtonNowItem.classList.remove("active_do_help_now_item");
+    financeHelpButtonNowItem.classList.remove("active_finance_help_now_item");
+    materialHelpButtonNowItem.classList.add("active_material_help_now_item");
+    volunteeringHelpButtonNowItem.classList.remove("active_volunteering_help_now_item");
+    waysOfPayBlock.classList.add("remove_ways_of_pay_block");
+    waysOfPayDenotation.classList.add("remove_ways_of_pay_denotation");
+    creditCardDataBlock.classList.remove("active_credit_card_data_block");
+    logoPrivatbank.classList.remove("active_logo_Privatbank");
+    helpNowDoBlock.classList.remove("active_help_now_do_block");
+    helpNowPayBlock.classList.add("remove_help_now_pay_block");
+    helpNowGiveBlock.classList.add("active_help_now_give_block");
+    helpNowVolunteeringBlock.classList.remove("active_help_now_volunteering_block");
+  }
+  else if (changeKindOfHelpUnderUserForm.target === volunteeringHelpButtonNowItem) {
+    doHelpButtonNowItem.classList.remove("active_do_help_now_item");
+    financeHelpButtonNowItem.classList.remove("active_finance_help_now_item");
+    materialHelpButtonNowItem.classList.remove("active_material_help_now_item");
+    volunteeringHelpButtonNowItem.classList.add("active_volunteering_help_now_item");
+    waysOfPayBlock.classList.add("remove_ways_of_pay_block");
+    waysOfPayDenotation.classList.add("remove_ways_of_pay_denotation");
+    creditCardDataBlock.classList.remove("active_credit_card_data_block");
+    logoPrivatbank.classList.remove("active_logo_Privatbank");
+    helpNowDoBlock.classList.remove("active_help_now_do_block");
+    helpNowPayBlock.classList.add("remove_help_now_pay_block");
+    helpNowGiveBlock.classList.remove("active_help_now_give_block");
+    helpNowVolunteeringBlock.classList.add("active_help_now_volunteering_block");
+  }
 });
 
 persons.addEventListener("click", (openForm) => {
@@ -149,7 +234,7 @@ persons.addEventListener("click", (openForm) => {
     financeHelpNowFormFourthBlock.classList.remove("active_help_now_form_fourth_block");
     logoBankTransition.classList.add("remove_logo_bank_transition");
   }
-  if (openForm.target === legalPersonButton) {
+  else if (openForm.target === legalPersonButton) {
     persons.classList.add("active_persons");
     legalPersonButton.classList.add("active_legal_person_button");
     individualPersonButton.classList.remove("active_individual_person_button");
@@ -167,38 +252,12 @@ logoPrivatbank.addEventListener("click", (logoPrivatBankActive) => {
     logoPrivatbank.classList.add("active_logo_Privatbank");
 });
 
-let doHelpButton2 = document.querySelector(".do_help_2"),
-financeHelpButton2 = document.querySelector(".finance_help_2"),
-materialHelpButton2 = document.querySelector(".material_help_2"),
-volunteeringHelpButton2 = document.querySelector(".volunteering_help_2");
-let helpNowFaArrowDoHelp = document.querySelector(".fa-arrow-do-help"),
-helpNowFaArrowFinanceHelp = document.querySelector(".fa-arrow-finance-help"),
-helpNowFaArrowMaterialHelp = document.querySelector(".fa-arrow-material-help"),
-helpNowFaArrowVolunteeringHelp = document.querySelector(".fa-arrow-volunteering-help");
-financeHelpButtonActivate.addEventListener("click", (financeHelpButtonColorChange) => {
-  if (financeHelpButtonColorChange.target === financeHelpButtonActivate) {
-    financeHelpButtonActivate.classList.add("active_finance_help");
-    financeHelpButton2.classList.add("active_finance_help_2");
-    helpNowFaArrowFinanceHelp.classList.add("active_fa-arrow-finance-help");
-  }  
-  if (financeHelpButtonColorChange.target === helpNowWindow) {
-    financeHelpButtonActivate.classList.remove("active_finance_help");
-    financeHelpButton2.classList.remove("active_finance_help_2");
-    helpNowFaArrowFinanceHelp.classList.remove("active_fa-arrow-finance-help");
-  }
-  if (financeHelpButtonColorChange.target === helpNowBackground) {
-    financeHelpButtonActivate.classList.remove("active_finance_help");
-    financeHelpButton2.classList.remove("active_finance_help_2");
-    helpNowFaArrowFinanceHelp.classList.remove("active_fa-arrow-finance-help");
-  }
-});
-
 document.addEventListener("click", (financeHelpFormClose) => {
   if (financeHelpFormClose.target === helpNowWindow) {
     financeHelpWindow.classList.remove("active_finance_help_window");
     helpNowWindow.classList.remove("active_help_now_popup_scroll");
   }
-  if (financeHelpFormClose.target === helpNowBackground) {
+  else if (financeHelpFormClose.target === helpNowBackground) {
     financeHelpWindow.classList.remove("active_finance_help_window");
     helpNowWindow.classList.remove("active_help_now_popup_scroll");
   }
@@ -220,3 +279,31 @@ files.addEventListener('change', function() {
   listFiles.innerHTML = li;
   formItem.appendChild(listFiles);  
 });
+
+document.addEventListener("click", (hoverArrowToIcon) => {
+  if (hoverArrowToIcon.target === doHelpButtonNowItem) {
+    document.querySelector(".top_arrow_do_help").style.opacity = 1;
+    document.querySelector(".top_arrow_finance_help").style.opacity = 0;
+    document.querySelector(".top_arrow_material_help").style.opacity = 0;
+    document.querySelector(".top_arrow_volunteering_help").style.opacity = 0;
+  }
+  else if (hoverArrowToIcon.target === financeHelpButtonNowItem) {
+    document.querySelector(".top_arrow_do_help").style.opacity = 0;
+    document.querySelector(".top_arrow_finance_help").style.opacity = 1;
+    document.querySelector(".top_arrow_material_help").style.opacity = 0;
+    document.querySelector(".top_arrow_volunteering_help").style.opacity = 0;
+  }
+  else if (hoverArrowToIcon.target === materialHelpButtonNowItem) {
+    document.querySelector(".top_arrow_do_help").style.opacity = 0;
+    document.querySelector(".top_arrow_finance_help").style.opacity = 0;
+    document.querySelector(".top_arrow_material_help").style.opacity = 1;
+    document.querySelector(".top_arrow_volunteering_help").style.opacity = 0;
+  }
+  if (hoverArrowToIcon.target === volunteeringHelpButtonNowItem) {
+    document.querySelector(".top_arrow_do_help").style.opacity = 0;
+    document.querySelector(".top_arrow_finance_help").style.opacity = 0;
+    document.querySelector(".top_arrow_material_help").style.opacity = 0;
+    document.querySelector(".top_arrow_volunteering_help").style.opacity = 1;
+  }
+});
+
