@@ -849,8 +849,6 @@ textarea {
   margin-right: 10px;
 }
 
-
-
 .help_now_form_first_block,
 .help_now_form_second_block {
   line-height: 20px;
@@ -977,6 +975,14 @@ textarea {
   border-radius: 10px;
 }
 
+.help_now_pay_block {
+  border: 3px solid #c5d5e6;
+  border-radius: 20px;
+  padding: 0px;
+  height: 320px;
+  z-index: 1000;
+}
+
 .help_now_pay {
   position: absolute;
   top: 105%;
@@ -995,7 +1001,7 @@ textarea {
   position: absolute;
   left: 0;
   right: 0;
-  margin: -15px 2.5%;
+  margin: -15px 2.25%;
   width: 0;
   height: 0;
   border-bottom: 20px solid #ffffff;
@@ -1008,7 +1014,7 @@ textarea {
   position: absolute;
   left: 0;
   right: 0;
-  margin: -20px 2.5%;
+  margin: -20px 2.25%;
   width: 0;
   height: 0;
   border-bottom: 20px solid #C5D5E6;
@@ -1021,7 +1027,7 @@ textarea {
   position: absolute;
   left: 0;
   right: 0;
-  margin: -15px 27.5%;
+  margin: -15px 27.25%;
   width: 0;
   height: 0;
   border-bottom: 20px solid #ffffff;
@@ -1034,7 +1040,7 @@ textarea {
   position: absolute;
   left: 0;
   right: 0;
-  margin: -20px 27.5%;
+  margin: -20px 27.25%;
   width: 0;
   height: 0;
   border-bottom: 20px solid #C5D5E6;
@@ -1047,7 +1053,7 @@ textarea {
   position: absolute;
   left: 0;
   right: 0;
-  margin: -15px 52.5%;
+  margin: -15px 52.25%;
   width: 0;
   height: 0;
   border-bottom: 20px solid #ffffff;
@@ -1060,7 +1066,7 @@ textarea {
   position: absolute;
   left: 0;
   right: 0;
-  margin: -20px 52.5%;
+  margin: -20px 52.25%;
   width: 0;
   height: 0;
   border-bottom: 20px solid #C5D5E6;
@@ -1073,7 +1079,7 @@ textarea {
   position: absolute;
   left: 0;
   right: 0;
-  margin: -15px 77.5%;
+  margin: -15px 77.25%;
   width: 0;
   height: 0;
   border-bottom: 20px solid #ffffff;
@@ -1086,20 +1092,12 @@ textarea {
   position: absolute;
   left: 0;
   right: 0;
-  margin: -20px 77.5%;
+  margin: -20px 77.25%;
   width: 0;
   height: 0;
   border-bottom: 20px solid #C5D5E6;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-}
-
-.help_now_pay_block {
-  border: 3px solid #c5d5e6;
-  border-radius: 20px;
-  padding: 0px;
-  height: 320px;
-  z-index: 1000;
 }
 
 .label_of_new_card_data {
@@ -1173,6 +1171,61 @@ textarea {
   margin-left: 32.5%;
 }
 
+.help_now_do_block {
+  border: 3px solid #c5d5e6;
+  border-radius: 20px;
+  padding: 0px;
+  height: 320px;
+  opacity: 0;
+  display: none;
+}
+
+.help_now_do_block.active_help_now_do_block {
+  opacity: 1;
+  display: block;
+}
+
+.ways_of_do_description,
+.ways_of_give_description,
+.ways_of_volunteering_description {
+  font-family: 'Gilroy';
+  font-size: 20px;
+  text-align: left;
+  margin: 20px 20px 20px 20px;
+}
+
+.help_now_pay_block {
+  display: block;
+}
+
+.help_now_pay_block.remove_help_now_pay_block {
+  display: none;
+}
+
+.help_now_give_block {
+  border: 3px solid #c5d5e6;
+  border-radius: 20px;
+  padding: 0px;
+  height: 320px;
+  display: none;
+}
+
+.help_now_give_block.active_help_now_give_block {
+  display: block;
+}
+
+.help_now_volunteering_block {
+  border: 3px solid #c5d5e6;
+  border-radius: 20px;
+  padding: 0px;
+  height: 320px;
+  display: none;
+}
+
+.help_now_volunteering_block.active_help_now_volunteering_block {
+  display: block;
+}
+
 .ways_of_pay_block {
   display: flex;
   justify-content: flex-start;
@@ -1180,6 +1233,14 @@ textarea {
   flex-direction: row;
   flex-wrap: wrap;
   width: 57.5%;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.ways_of_pay_block.remove_ways_of_pay_block {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
 }
 
 .kinds_of_help_change {
@@ -1198,6 +1259,13 @@ textarea {
   margin-top: 20px;
   margin-bottom: -5px;
   color: #c5d5e6;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.ways_of_pay_denotation.remove_ways_of_pay_denotation {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .input_card_data_denotation {
